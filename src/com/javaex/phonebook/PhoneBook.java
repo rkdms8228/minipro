@@ -10,7 +10,6 @@ import java.io.InputStreamReader;
 import java.io.OutputStream;
 import java.io.OutputStreamWriter;
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.List;
 import java.util.Scanner;
 
@@ -67,7 +66,7 @@ public class PhoneBook {
 			int num = sc.nextInt();
 			
 
-			switch(num) {
+			switch(num) { //전화번호부 출력
 	
 				case 1: //[리스트]
 					System.out.println();
