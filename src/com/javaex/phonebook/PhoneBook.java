@@ -68,7 +68,9 @@ public class PhoneBook {
 			switch(num) {
 	
 				case 1: //[리스트]
+					System.out.println();
 					System.out.println("<1.리스트>");
+					System.out.println();
 					int i = 1;
 					
 					for(Person p : pArray) {
@@ -79,8 +81,12 @@ public class PhoneBook {
 					break;
 					
 				case 2:	//[등록]
+					System.out.println();
 					System.out.println("<2.등록>");
+					System.out.println();
+					
 					sc.nextLine();
+					
 					System.out.print(">이름: ");
 					String name = sc.nextLine();
 					
