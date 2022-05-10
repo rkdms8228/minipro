@@ -102,7 +102,7 @@ public class PhoneBook {
 					bw.close();
 					break;
 					
-				case 3:
+				case 3: //[삭제]
 					System.out.println();
 					System.out.println("<3.삭제>");
 					System.out.println();
@@ -111,7 +111,7 @@ public class PhoneBook {
 					System.out.print(">번호: ");
 					int del = sc.nextInt();
 					
-					pArray.remove(del-1);
+					pArray.remove(del-1); //배열 번호에서 삭제
 					
 					System.out.println("[삭제되었습니다.]");
 					break;
@@ -119,7 +119,7 @@ public class PhoneBook {
 				case 4:
 					break;
 					
-				case 5:
+				case 5: //[종료]
 					System.out.println();
 					System.out.println("<5.종료>");
 					System.out.println();
@@ -128,7 +128,7 @@ public class PhoneBook {
 					System.out.println("*"+"                  "+"감사합니다"+"                  "+"*");
 					System.out.println("*********************************************");
 					
-					flag = false;
+					flag = false; //탈출
 					break;
 					
 				default:
