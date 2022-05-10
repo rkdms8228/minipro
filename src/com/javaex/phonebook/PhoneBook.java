@@ -118,7 +118,7 @@ public class PhoneBook {
 					System.out.println("[삭제되었습니다.]");
 					break;
 					
-				case 4:
+				case 4: //[검색]
 					System.out.println();
 					System.out.println("<4.검색>");
 					System.out.println();
@@ -128,7 +128,7 @@ public class PhoneBook {
 					System.out.print(">이름: ");
 					String keyword = sc.nextLine();
 
-					for(Person p : pArray) {
+					for(Person p : pArray) { //검색한 값과 동일한 데이터 출력
 						
 						if(p.getName().matches(".*"+keyword+".*")) {
 							System.out.println("이름: "+p.getName()+"\t전화번호: "+p.getHp()+"\t회사번호: "+p.getCompany());
