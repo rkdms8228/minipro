@@ -28,6 +28,7 @@ public class PhoneBook {
 		boolean flag = true;
 		List<Person> pArray = new ArrayList<Person>(); //리스트 생성
 		
+		//phoneDB 읽어 내기
 		InputStream is = new FileInputStream("./phoneDB.txt");
 		InputStreamReader isr = new InputStreamReader(is, "UTF-8");
 		BufferedReader br = new BufferedReader(isr);
@@ -46,7 +47,8 @@ public class PhoneBook {
 					break;
 				}else {
 					
-					String[] person = chart.split(","); //리스트 배열 정리
+					//리스트 배열 관리
+					String[] person = chart.split(",");
 					pArray.add(new Person(person[0], person[1], person[2]));
 
 				}
@@ -63,9 +65,9 @@ public class PhoneBook {
 			int num = sc.nextInt();
 			
 
-			switch(num) { //[리스트]
+			switch(num) {
 	
-				case 1:
+				case 1: //[리스트]
 					System.out.println("<1.리스트>");
 					int i = 1;
 					
@@ -76,7 +78,19 @@ public class PhoneBook {
 
 					break;
 					
-				case 2:	
+				case 2:	//[등록]
+					System.out.println("<2.등록>");
+					sc.nextLine();
+					System.out.print(">이름: ");
+					String name = sc.nextLine();
+					
+					System.out.print(">휴대전화: ");
+					String ph = sc.nextLine();
+					
+					System.out.print(">회사전화: ");
+					String company = sc.nextLine();
+					
+					pArray.add(new Person(name, ph, company));
 					
 					bw.close();
 					break;
