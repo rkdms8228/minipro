@@ -10,6 +10,7 @@ import java.io.InputStreamReader;
 import java.io.OutputStream;
 import java.io.OutputStreamWriter;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 import java.util.Scanner;
 
@@ -27,6 +28,7 @@ public class PhoneBook {
 		
 		boolean flag = true;
 		List<Person> pArray = new ArrayList<Person>(); //리스트 생성
+
 		
 		//phoneDB 읽어 내기
 		InputStream is = new FileInputStream("./phoneDB.txt");
@@ -50,7 +52,7 @@ public class PhoneBook {
 					//리스트 배열 관리
 					String[] person = chart.split(",");
 					pArray.add(new Person(person[0], person[1], person[2]));
-
+					
 				}
 			
 				bw.write(chart);
@@ -71,6 +73,7 @@ public class PhoneBook {
 					System.out.println();
 					System.out.println("<1.리스트>");
 					System.out.println();
+					
 					int i = 1;
 					
 					for(Person p : pArray) {
@@ -84,7 +87,7 @@ public class PhoneBook {
 					System.out.println("<2.등록>");
 					System.out.println();
 					
-					sc.nextLine();
+					sc.nextLine(); //엔터값 제거
 					
 					System.out.print(">이름: ");
 					String name = sc.nextLine();
@@ -117,6 +120,22 @@ public class PhoneBook {
 					break;
 					
 				case 4:
+					System.out.println();
+					System.out.println("<4.검색>");
+					System.out.println();
+					
+					sc.nextLine(); //엔터값 제거
+					
+					System.out.print(">이름: ");
+					String keyword = sc.nextLine();
+
+					for(Person p : pArray) {
+						
+						if(p.getName().matches(".*"+keyword+".*")) {
+							System.out.println("이름: "+p.getName()+"\t전화번호: "+p.getHp()+"\t회사번호: "+p.getCompany());
+						}
+						
+					}
 					break;
 					
 				case 5: //[종료]
