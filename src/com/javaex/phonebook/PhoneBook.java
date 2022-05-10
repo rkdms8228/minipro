@@ -92,6 +92,8 @@ public class PhoneBook {
 					
 					pArray.add(new Person(name, ph, company));
 					
+					System.out.println("[등록되었습니다.]");
+					
 					bw.close();
 					break;
 					
