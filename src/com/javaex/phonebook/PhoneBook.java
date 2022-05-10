@@ -120,6 +120,15 @@ public class PhoneBook {
 					break;
 					
 				case 5:
+					System.out.println();
+					System.out.println("<5.종료>");
+					System.out.println();
+					
+					System.out.println("*********************************************");
+					System.out.println("*"+"                  "+"감사합니다"+"                  "+"*");
+					System.out.println("*********************************************");
+					
+					flag = false;
 					break;
 					
 				default:
