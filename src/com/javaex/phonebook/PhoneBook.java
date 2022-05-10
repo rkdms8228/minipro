@@ -77,7 +77,6 @@ public class PhoneBook {
 						System.out.println(i+"."+p.getName()+"\t"+p.getHp()+"\t"+p.getCompany());
 						i++;
 					}
-
 					break;
 					
 				case 2:	//[등록]
@@ -104,6 +103,17 @@ public class PhoneBook {
 					break;
 					
 				case 3:
+					System.out.println();
+					System.out.println("<3.삭제>");
+					System.out.println();
+					
+					
+					System.out.print(">번호: ");
+					int del = sc.nextInt();
+					
+					pArray.remove(del-1);
+					
+					System.out.println("[삭제되었습니다.]");
 					break;
 					
 				case 4:
