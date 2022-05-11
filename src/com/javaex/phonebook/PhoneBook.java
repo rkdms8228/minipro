@@ -25,6 +25,7 @@ public class PhoneBook {
 		System.out.println("*"+"              "+"전화번호 관리 프로그램"+"              "+"*");
 		System.out.println("*********************************************");
 		
+		
 		boolean flag = true;
 		List<Person> pArray = new ArrayList<Person>(); //리스트 생성
 
@@ -130,9 +131,19 @@ public class PhoneBook {
 
 					for(Person p : pArray) { //검색한 값과 동일한 데이터 출력
 						
-						if(p.getName().matches(".*"+keyword+".*")) {
-							System.out.println("이름: "+p.getName()+"\t전화번호: "+p.getHp()+"\t회사번호: "+p.getCompany());
+						if(p.getName().matches(".*"+keyword+".*")) { //contain 코드도 검색 가능**(강사님이 쓰신 코드)
+							System.out.println("이름: "+p.getName()+"\t전화번호: "+p.getHp()+"\t회사전화: "+p.getCompany());
 						}
+						
+						/*
+						if(serchName.contains(keyword)) { //강사님이 쓰신 contain 코드
+						System.out.print(i + 1 + ".   ");
+						System.out.print(pList.get(i).getName() + "\t");
+						System.out.print(pList.get(i).getHp() + "\t");
+						System.out.print(pList.get(i).getCompany() + "\t");
+						System.out.println("");
+						}
+						*/
 						
 					}
 					break;
