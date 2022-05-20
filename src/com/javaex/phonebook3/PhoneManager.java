@@ -189,6 +189,9 @@ public class PhoneManager {
 				System.out.print(pList.get(i).getCompany() + "\t");
 				System.out.println("");
 			}
+			
 		}
+		
 	}
+	
 }

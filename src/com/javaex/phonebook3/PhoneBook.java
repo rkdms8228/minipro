@@ -1,17 +1,6 @@
 package com.javaex.phonebook3;
 
-import java.io.BufferedReader;
-import java.io.BufferedWriter;
-import java.io.FileReader;
-import java.io.FileWriter;
 import java.io.IOException;
-import java.io.Reader;
-import java.io.Writer;
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Scanner;
-
-import com.javaex.phonebook.Person;
 
 public class PhoneBook {
 		
