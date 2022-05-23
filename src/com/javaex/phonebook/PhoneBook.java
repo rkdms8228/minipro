@@ -136,12 +136,15 @@ public class PhoneBook {
 						}
 						
 						/*
-						if(serchName.contains(keyword)) { //강사님이 쓰신 contain 코드
-						System.out.print(i + 1 + ".   ");
-						System.out.print(pList.get(i).getName() + "\t");
-						System.out.print(pList.get(i).getHp() + "\t");
-						System.out.print(pList.get(i).getCompany() + "\t");
-						System.out.println("");
+						for (int i = 0; i < pList.size(); i++) {
+							String serchName = pList.get(i).getName();
+							if (serchName.contains(keyword)) {
+								System.out.print(i + 1 + ".   ");
+								System.out.print(pList.get(i).getName() + "\t");
+								System.out.print(pList.get(i).getHp() + "\t");
+								System.out.print(pList.get(i).getCompany() + "\t");
+								System.out.println("");
+							}
 						}
 						*/
 						
